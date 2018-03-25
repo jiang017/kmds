@@ -18,7 +18,7 @@ public class StudentAction {
     @RequestMapping("/getUserInfo")
     public ModelAndView getUserInfoByName(String userName) {
     	ModelAndView modelAndView = new ModelAndView();
-    	System.out.println("请求数据userName为:" + userName);
+    	System.out.println("请求数据userName111为:" + userName);
     	String str = RedisUtil.getJedisInstall().get("userList" + userName);
     	if (str == null) {
     		str = userServiceImpl.getUserInfo(userName).toString();
